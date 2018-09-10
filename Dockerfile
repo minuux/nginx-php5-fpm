@@ -7,8 +7,8 @@ RUN apk update && \
     php5-mssql \
     tzdata && \
     cp /usr/share/zoneinfo/${timezone} /etc/localtime && \
-    echo ${timezone} > /etc/timezone && \
-    apk del tzdata
+    echo ${timezone} > /etc/timezone
+#    apk del tzdata
     
 # https://github.com/aliyun/aliyun-oss-php-sdk/issues/97
 RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv
